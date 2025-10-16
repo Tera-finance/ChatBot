@@ -25,7 +25,7 @@ const { Client, LocalAuth } = pkg;
 
 const client = new Client({
     authStrategy: new LocalAuth({
-        clientId: process.env.WHATSAPP_SESSION_NAME || 'trustbridge-session'
+        clientId: process.env.WHATSAPP_SESSION_NAME || 'tera-session'
     }),
 });
 
@@ -559,7 +559,7 @@ Are you sure you want to cancel your current transfer and start over?
         return;
       }
       
-      await message.reply(`👋 Hello! Welcome to TrustBridge! 🌉
+      await message.reply(`👋 Hello! Welcome to Tera Finance! 🌉
 Your trusted partner to send money across different countries faster using blockchain technology.
 
 🚀 Ready to transfer money? Simply type "transfer" to get started!
@@ -603,7 +603,7 @@ How would you like to pay?
     
     // Handle help command
     if (userInput === 'help') {
-      await message.reply(`🆘 *TrustBridge Help & Support*
+      await message.reply(`🆘 *Tera Finance Help & Support*
 
 📋 *Available Commands:*
 • *transfer* - Start a new cross-border transfer

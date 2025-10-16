@@ -14,7 +14,7 @@ const logger = winston.createLogger({
     winston.format.errors({ stack: true }),
     winston.format.json()
   ),
-  defaultMeta: { service: 'trustbridge-whatsapp-bot' },
+  defaultMeta: { service: 'tera-finance-whatsapp-bot' },
   transports: [
     // Error logs
     new winston.transports.File({ 
@@ -33,7 +33,7 @@ const logger = winston.createLogger({
 });
 
 // Safe JSON stringify that handles circular references
-function safeStringify(obj: any, indent = 2): string {
+function safeStringify(obj: unknown, indent = 2): string {
   const seen = new WeakSet();
   return JSON.stringify(obj, (key, value) => {
     if (typeof value === 'object' && value !== null) {
